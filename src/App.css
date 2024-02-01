@@ -1,38 +1,376 @@
 .App {
+  font-family: 'Montserrat', Arial, sans-serif;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  width: 100%;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: transparent;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 10px;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  transition: all 0.5s ease;
+  position: fixed;
+  top: -80px;
+}
+
+.App-header.visible {
+  top: 0;
+}
+
+.label {
+  /* color: #61dafb; */
+  font-size: 30px;
+  font-weight: bold;
+  padding-right: 20px;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+  padding-left: 30px;
+}
+
+nav button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  margin: 2px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+nav button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+nav button:hover::after {
+  transform: translateX(0);
+}
+
+section {
+  padding: 40px;
+  text-align: left;
+  margin: auto;
+  min-height: 80vh;
+  /* Adjust this value as needed */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  width: 100%;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* margin: 20px 0; */
+}
+
+.first-section {
+  min-height: 110vh;
+  /* Height adjusts to show full background image */
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.initial-label {
+  margin-top: 40vh;
+  translate: translateY(-50%);
+  font-size: 4em;
+  text-align: center;
+  z-index: 1;
+  color: white
+}
+
+section:nth-child(odd) {
+  background-color: #e9ecef;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.content {
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+  color: white;
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+  font-size: 1.2em;
+}
+
+.first-section .content {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content h2 {
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content p {
+  font-size: 1.2rem;
+  line-height: 1.8em;
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+}
+
+.dimmed-layer {
+  background-color: rgba(0, 0, 0, 0.35);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.parallax {
+  position: relative;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.parallax1 {
+  background-image: url("bg2.jpg");
+}
+
+.second-section {
+  display: flex;
+  flex-direction: column;
+  align-items: 'center';
+  justify-content: 'center';
+  height: '100vh';
+  padding: '2em';
+  background-color: '#f9f9f9';
+  color: '#333';
+  text-align: 'center';
+}
+
+.second-section .title {
+  font-size: 2.0em;
+  color: #333;
+}
+.second-section p {
+  font-size: 1.2em;
+  color: #666;
+  max-width: 800px;
+}
+
+.second-section .title {
+  font-size: '2.5em';
+  margin-bottom: '0.5em';
+}
+
+.second-section .text {
+  font-size: '1.2em';
+  max-width: '800px';
+}
+
+
+.focus-areas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+  position: relative;
+  padding: 2em;
+  overflow: hidden;
+}
+
+.focus-areas .content {
+  text-shadow: none
+}
+
+.parallax2 {
+  background-image: url('bg3.jpg');
+}
+
+.focus-title {
+  font-size: 2.5em;
+  margin-bottom: 1em;
+}
+
+.focus-area-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
+
+.focus-area-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  /* semi-transparent white */
+  padding: 1em;
+  border-radius: 8px;
+  /* box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); */
+  transition: transform 0.3s ease-in-out;
+  color: #333;
+}
+
+.focus-area-card:hover {
+  transform: translateY(-10px);
+  background-color: rgba(255, 255, 255, 0.9);
+  /* slightly less transparent on hover */
+}
+
+.focus-area-title {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+  color: #333;
+}
+
+.focus-area-description {
+  font-size: 1em;
+  color: #2c2c2c;
+  line-height: 1.4;
+}
+
+p.focus-area-description {
+  box-shadow: none;
+}
+
+.join-us {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 2em;
+  background: radial-gradient(circle, #f9f9f9, #e6e6e6);
+  text-align: center;
+}
+
+.join-us-title {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.separator {
+  width: 50px;
+  height: 2px;
+  background-color: #333;
+  margin: 20px 0;
+}
+
+.join-us-content {
+  font-size: 1.2em;
+  color: #666;
+  max-width: 800px;
+}
+
+.join-us-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 10px;
+  /* Make the button corners rounded */
+}
+
+.join-us-btn:hover {
+  background-color: #666;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 500px;
+}
+
+.close-btn {
+  float: right;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: black;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin: 10px 0;
+  color: #333;
+  /* Make the labels a dark color */
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #666;
+}
+
+footer {
+  background-color: #282c34;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  height: 60px;
+  clear: both;
 }
