@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/gender-equity-hub/static/css/main.4aa464bb.css",
+    "main.js": "/gender-equity-hub/static/js/main.f8575cec.js",
+    "static/media/bg3.jpg": "/gender-equity-hub/static/media/bg3.4317b18a59b531dc8240.jpg",
+    "static/media/bg2.jpg": "/gender-equity-hub/static/media/bg2.1c515578a43885657e62.jpg",
+    "index.html": "/gender-equity-hub/index.html",
+    "main.4aa464bb.css.map": "/gender-equity-hub/static/css/main.4aa464bb.css.map",
+    "main.f8575cec.js.map": "/gender-equity-hub/static/js/main.f8575cec.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4aa464bb.css",
+    "static/js/main.f8575cec.js"
+  ]
+}
